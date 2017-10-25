@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gradient_start_color">#03AEEF</color>
+    <color name="gradient_middle_color">#4ac7f7</color>
+    <color name="gradient_end_color">#8bd7f4</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="black">#000000</color>
+</resources>
