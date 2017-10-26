@@ -1,14 +1,7 @@
 package com.sandiplayek.simplepaginationlibrary;
-
-import android.app.Fragment;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.sandiplayek.paginationlibrary.PageDetails;
 import com.sandiplayek.paginationlibrary.PaginationFooterFragment;
 
 public class MainActivity extends AppCompatActivity{

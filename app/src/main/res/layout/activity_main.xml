@@ -24,12 +24,6 @@
         android:id="@+id/ll_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <!--<fragment
-            android:tag="PaginationFooterFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:name="com.sandiplayek.paginationlibrary.PaginationFooterFragment"
-            android:id="@+id/frag_footer"
-            tools:layout="@layout/fragment_pagination_footer" />-->
+
     </LinearLayout>
 </LinearLayout>
