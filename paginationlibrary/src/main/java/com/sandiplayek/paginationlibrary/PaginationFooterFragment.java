@@ -64,10 +64,15 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
         tv_last_pos.setOnClickListener(this);
         iv_go.setOnClickListener(this);
 
-        tPage=this.getArguments().getString("PAGE NUMBER").toString();
-        colorCode=this.getArguments().getInt("PAGINATION COLOR");
-        loadingView(tPage);
-        footer_pagination.setBackgroundResource(colorCode);
+        try{
+            tPage=this.getArguments().getString("PAGE NUMBER").toString();
+            colorCode=this.getArguments().getInt("PAGINATION COLOR");
+            loadingView(tPage);
+            footer_pagination.setBackgroundResource(colorCode);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
 
         return v;
     }
