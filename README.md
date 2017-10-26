@@ -24,7 +24,7 @@ AND
 
 ```sh
 dependencies {
-    compile 'com.github.SandipLayek27:SimplePagination:1.2'
+    compile 'com.github.SandipLayek27:SimplePagination:1.1'
 }
 ```
 # ★ Uses of this features.
