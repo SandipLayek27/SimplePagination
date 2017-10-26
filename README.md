@@ -7,7 +7,7 @@ User can hit 1, 2 and 3 buttons and also hit previous and next button. Each and 
 [![Arunava](https://avatars2.githubusercontent.com/u/31703258?v=4&s=40) Arunava](https://github.com/ghosharunava)
 
 # ★ Screen
-https://github.com/SandipLayek27/SimplePagination/blob/master/paginationlibrary/src/main/assets/pagination_screens.png
+https://raw.githubusercontent.com/SandipLayek27/SimplePagination/master/paginationlibrary/src/main/assets/pagination_screens.png
 
 # ★ Gradle Dependency
 Add Gradle dependency in the build.gradle file of your application module (app in the most cases) :
