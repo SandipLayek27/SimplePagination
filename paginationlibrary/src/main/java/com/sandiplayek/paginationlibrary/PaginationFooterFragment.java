@@ -30,6 +30,7 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
     LinearLayout ll_search_section;
     View view_line;
     String tPage="";
+    int colorCode;
 
     public PaginationFooterFragment() {
         // Required empty public constructor
@@ -64,7 +65,9 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
         iv_go.setOnClickListener(this);
 
         tPage=this.getArguments().getString("PAGE NUMBER").toString();
+        colorCode=this.getArguments().getInt("PAGINATION COLOR");
         loadingView(tPage);
+        footer_pagination.setBackgroundResource(colorCode);
 
         return v;
     }

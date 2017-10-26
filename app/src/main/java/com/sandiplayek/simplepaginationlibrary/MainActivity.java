@@ -1,6 +1,7 @@
 package com.sandiplayek.simplepaginationlibrary;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +16,10 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Bundle bundle = new Bundle();
         bundle.putString("PAGE NUMBER","20");
+        bundle.putInt("PAGINATION COLOR",R.drawable.gradient_background);
         PaginationFooterFragment paginationFooterFragment = new PaginationFooterFragment();
         paginationFooterFragment.setArguments(bundle);
 
@@ -29,28 +32,22 @@ public class MainActivity extends AppCompatActivity{
             public void onFirstPositionClick(int position) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onMiddlePositionClick(int position) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onLastPositionClick(int position) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onPrevButtonClick(int position) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
-
-
             @Override
             public void onNextPositionClick(int position) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onSearchingPositionClick(int position) {
                 Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
