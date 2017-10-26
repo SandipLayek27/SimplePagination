@@ -29,6 +29,7 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
     OnButtonClickListener onButtonClickListener;
     LinearLayout ll_search_section;
     View view_line;
+    String tPage="";
 
     public PaginationFooterFragment() {
         // Required empty public constructor
@@ -62,7 +63,8 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
         tv_last_pos.setOnClickListener(this);
         iv_go.setOnClickListener(this);
 
-        loadingView(PageDetails.totalPageNumber);
+        tPage=this.getArguments().getString("PAGE NUMBER").toString();
+        loadingView(tPage);
 
         return v;
     }
@@ -211,10 +213,10 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
 
     public void nextPositionClickAction() {
         int printedValue=0;
-        int totalPage=stringTointConverter(PageDetails.totalPageNumber);               //Get the total page number as integer format
+        int totalPage=stringTointConverter(tPage);               //Get the total page number as integer format
         if(stringTointConverter(fetchTextValue(tv_last_pos))==totalPage){   //Check last text position value same as total page number
             iv_more_next.setVisibility(View.GONE);                          //Then more next image view visibility gone
-            Toast.makeText(getActivity(), "Total Page "+ PageDetails.totalPageNumber, Toast.LENGTH_SHORT).show();   //And print a text
+            Toast.makeText(getActivity(), "Total Page "+ tPage, Toast.LENGTH_SHORT).show();   //And print a text
             return;     //Return from this section
         }
         iv_more_prev.setVisibility(View.VISIBLE);       //Otherwise more preview and more next visibility Visible
@@ -242,7 +244,7 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
     public void goPositionClickAction() {
         int printedValue=0;
         int searchingPageNumber=0;
-        int totP=stringTointConverter(PageDetails.totalPageNumber);
+        int totP=stringTointConverter(tPage);
         try{
             searchingPageNumber=stringTointConverter(et_number.getText().toString().trim());
         }catch (Exception e){
@@ -259,7 +261,7 @@ public class PaginationFooterFragment extends Fragment implements View.OnClickLi
             return;
         }
         if(searchingPageNumber>totP){
-            Toast.makeText(getActivity(), "Total Page "+ PageDetails.totalPageNumber, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Total Page "+ tPage, Toast.LENGTH_SHORT).show();
             return;
         }else if(searchingPageNumber==totP){
             int mPos=searchingPageNumber-1;
